@@ -1,12 +1,12 @@
 <script>
     import CharityList from "../components/CharityList.svelte";
+    import Header from "../components/Header.svelte";
+    import Welcome from "../components/Welcome.svelte";
+    import Promo from "../components/Promo.svelte";
+    import Footer from "../components/Footer.svelte";
+    import { charities } from "../data/charities.js";
 
     let title = "Charity";
-    setTimeout(function () {
-        title = "Donasi";
-    }, 2000);
-
-    let charities = ["Charity 1", "Charity 2", "Charity 3"];
 </script>
 
 <svelte:head>
@@ -16,12 +16,8 @@
     />
 </svelte:head>
 
-<h1>{title}</h1>
+<Header />
+<Welcome />
 <CharityList {charities} />
-
-<style>
-    h1 {
-        font-size: 3em;
-        color: brown;
-    }
-</style>
+<Promo />
+<Footer />
